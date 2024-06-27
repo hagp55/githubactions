@@ -6,14 +6,10 @@ jobs:
   run-first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Node Version on Ubuntu
-        run: |
-          pwd
-          whoami
-
       - name: Show all files
         run: ls -la
 
-      - name: Show host
-        run: uname -a
+      - uses: actions/checkout@v4
 
+      - name: Display all files
+        run: ls -la
