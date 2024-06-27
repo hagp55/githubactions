@@ -1,0 +1,19 @@
+name: Third Worflow Git Hub Atcions
+
+on: [push]
+
+jobs:
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Node Version on Ubuntu
+        run: |
+          pwd
+          whoami
+
+      - name: Show all files
+        run: ls -la
+
+      - name: Show host
+        run: uname -a
+
