@@ -7,8 +7,16 @@ on:
             - completed
 
 jobs:
-    hello-command:
+    success-command:
         runs-on: ubuntu-latest
+        if: ${{ github.event.workflow_run.conclusion == 'success'}}
         steps:
-            - name: Show all files
-              run: echo "Hello Dude!!!"
+            - name: Success Command
+              run: echo "Success"
+
+    failur-command:
+        runs-on: ubuntu-lates
+        if: ${{ github.event.workflow_run.conclusion == 'failure'}}
+        steps:
+            - name: Failure Command
+              run: echo "Faild"
