@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show all files
-        run: ls -la
+        run: lsssss -la
 
       # - uses: actions/checkout@v4
       - name: Copy files
