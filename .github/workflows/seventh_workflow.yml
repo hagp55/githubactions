@@ -3,7 +3,7 @@ name: Seventh Workflow Git Hab
 
 on: 
     schedule:
-        - cron: "*/0.5 * * * *"
+        - cron: "*/1 * * * *"
 
 jobs:
     run-first-command:
