@@ -1,0 +1,28 @@
+name: Sixth Workflow Git Hab
+
+
+on: 
+    push:
+        branches:
+            - main
+            - "page/*"  # all page....
+            - "page/**"  # all page....
+            - "!page/blog"  # exclude!!
+
+        # branches-ignore:
+        #     - "page/blog"  # exclude!!
+        # tags:
+        #     - "v1.*"
+        #     - v2
+            # - "!v1.2.1"  exclude!!
+        paths:
+            - "**.html"
+
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Event Vars
+              run: | 
+                echo $GITHUB_SHA
+                echo $GITHUB_REF
